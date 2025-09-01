@@ -87,7 +87,7 @@
     
     "custom/shutdown": {
         "format": "󰐥",
-        "on-click": "kitty -e $HOME/.config/hypr/scripts/power_menu.sh",
+        "on-click": "$HOME/.config/hypr/scripts/powermenu.sh",
         "tooltip": false
     }
 }
