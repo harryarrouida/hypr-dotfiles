@@ -1,4 +1,0 @@
-2025-08-31 23:27:14.682 [warning] Creation of workbench contribution 'workbench.contrib.preferencesActions' took 29ms.
-2025-08-31 23:27:16.936 [info] Started local extension host with pid 1226.
-2025-08-31 23:27:19.170 [info] ChatSessionStore: Migrating 0 chat sessions from storage service to file system
-2025-08-31 23:27:26.476 [info] [perf] Render performance baseline is 509ms

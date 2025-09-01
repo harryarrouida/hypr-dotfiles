@@ -1,6 +1,0 @@
-2025-09-01 01:37:55.688 [warning] Creation of workbench contribution 'workbench.contrib.preferencesActions' took 21ms.
-2025-09-01 01:37:59.385 [info] Started local extension host with pid 1469.
-2025-09-01 01:38:13.489 [info] [perf] Render performance baseline is 236ms
-2025-09-01 01:43:41.120 [warning] Creation of workbench contribution 'workbench.contrib.preferencesActions' took 86ms.
-2025-09-01 01:43:42.383 [info] Started local extension host with pid 2027.
-2025-09-01 01:43:49.919 [info] [perf] Render performance baseline is 502ms
