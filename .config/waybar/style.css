@@ -21,9 +21,7 @@ window#waybar {
 #network,
 #bluetooth,
 #backlight,
-#custom-workspace,
-#custom-shutdown, 
-#window
+#custom-shutdown
 {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 4px 15px;
@@ -116,4 +114,10 @@ window#waybar {
 
 #custom-shutdown {
     color: #f38ba8; /* Red */
+}
+
+
+#window{
+	margin-left: 8px;
+	font-size: 10px;
 }

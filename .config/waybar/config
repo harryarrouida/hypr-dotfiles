@@ -2,25 +2,10 @@
     "layer": "top",
     "position": "top",
     "height": 45,
-    "modules-left": ["custom/workspace", "memory", "cpu", "hyprland/window"],
+    "modules-left": ["hyprland/workspaces", "memory", "cpu", "hyprland/window"],
     "modules-center": ["clock#date", "clock#time"],
-    "modules-right": ["backlight", "bluetooth", "pulseaudio", "network", "battery", "custom/shutdown"],
+    "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery", "custom/shutdown"],
     
-    "//hyprland/workspaces": {
-        "on-click": "activate",
-        "all-outputs": true,
-        "format": "{icon}",
-        "format-icons": {
-            "active": "●",
-            "default": "○"
-        }
-    },
-
-    "custom/workspace": {
-        "format": "{}",
-        "exec": "hyprctl activeworkspace -j | python -c \"import sys, json; print(json.load(sys.stdin)['id'])\"",
-        "interval": 1
-    },
 
     "memory": {
         "format": "󰍛 {used:0.1f}G/{total:0.1f}G"
@@ -34,6 +19,23 @@
         "format": "{}",
         "max-length": 35
     },
+
+	"hyprland/workspaces": {
+    "on-click": "activate",
+    "persistent_workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": []
+    },
+    "all-outputs": true,
+    "format": "{name}",
+    "format-icons": {
+        "active": "{name}",
+        "default": ""
+    }
+},
     
     "clock#time": {
         "format": "{:%H:%M}"
@@ -68,7 +70,8 @@
     "network": {
         "format-wifi": "󰤨 {essid}",
         "format-ethernet": "󰈀 Ether",
-        "format-disconnected": "󰤭 Offline"
+        "format-disconnected": "󰤭 Offline",
+	"on-click": "kitty -e nmtui"
     },
     
     "battery": {
@@ -84,7 +87,7 @@
     
     "custom/shutdown": {
         "format": "󰐥",
-        "on-click": "$HOME/.config/hypr/scripts/power_menu.sh",
+        "on-click": "kitty -e $HOME/.config/hypr/scripts/power_menu.sh",
         "tooltip": false
     }
 }
