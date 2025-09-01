@@ -8,7 +8,7 @@
     
 
     "memory": {
-        "format": "󰍛 {used:0.1f}G/{total:0.1f}G"
+        "format": "󰍛 {used:0.1f}G"
     },
 
     "cpu": {
@@ -17,26 +17,19 @@
 
     "hyprland/window": {
         "format": "{}",
-        "max-length": 35
+        "max-length": 15
     },
+
 
 	"hyprland/workspaces": {
     "on-click": "activate",
+    "persistent-only": true,
     "persistent_workspaces": {
         "1": [],
         "2": [],
-        "3": [],
-        "4": [],
-        "5": []
+        "3": []
     },
-    "all-outputs": true,
-    "format": "{name}",
-    "format-icons": {
-        "active": "{name}",
-        "default": ""
-    }
 },
-    
     "clock#time": {
         "format": "{:%H:%M}"
     },
@@ -47,7 +40,7 @@
 
     "backlight": {
         "device": "intel_backlight",
-        "format": "{icon} {percent}%",
+        "format": "{icon}  {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"]
     },
 
@@ -68,9 +61,9 @@
     },
     
     "network": {
-        "format-wifi": "󰤨 {essid}",
-        "format-ethernet": "󰈀 Ether",
-        "format-disconnected": "󰤭 Offline",
+        "format-wifi": "󰤨  {essid}",
+        "format-ethernet": "󰈀  Ether",
+        "format-disconnected": "󰤭  Offline",
 	"on-click": "kitty -e nmtui"
     },
     

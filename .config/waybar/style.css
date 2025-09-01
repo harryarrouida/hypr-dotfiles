@@ -3,7 +3,7 @@
 * {
     border: none;
     font-family: 'Fira Code';
-    font-size: 17px;
+    font-size: 16px;
     min-height: 0;
 }
 
@@ -48,10 +48,6 @@ window#waybar {
 
 #workspaces button.active {
     color: #cdd6f4; /* Active/white (Text) */
-}
-
-#workspaces button:hover {
-    color: #cdd6f4;
 }
 
 #cpu {
