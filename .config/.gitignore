@@ -1,20 +1,6 @@
-bluetuith/
-Code - OSS/
-configstore/
-dconf/
-Electron/
-go/
-gtk-3.0/
-gtk-4.0/
-kde.org/
-pulse/
-session/
-systemd/
-wal/
-wlogout/
-xsettingsd/
-yay/
-dolphinrc
-kiorc
-pavuncontrol.ini
-trashrc
+/*
+!/hypr
+!/kitty
+!/rofi
+!/waybar
+!/fastfetch
