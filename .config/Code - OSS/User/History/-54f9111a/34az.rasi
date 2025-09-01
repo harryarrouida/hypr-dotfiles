@@ -1,0 +1,8 @@
+/* ~/.config/rofi/config.rasi */
+
+/*
+* This is the correct file to import.
+* It contains just the color variables at the top of the file.
+*/
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+

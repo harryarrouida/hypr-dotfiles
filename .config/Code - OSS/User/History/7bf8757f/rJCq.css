@@ -1,0 +1,95 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+* {
+    border: none;
+    font-family: 'Fira Code';
+    font-size: 18px;
+    min-height: 0;
+}
+
+window#waybar {
+    /* background: rgba(0, 0, 0, 0.7);  */
+    background: @background;
+}
+
+.modules-left {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 4px 8px 4px 12px;
+    border-radius: 12px;
+    padding: 0 8px;
+}
+
+.modules-center {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 4px 2px;
+    border-radius: 12px;
+    padding: 0 16px;
+}
+
+.modules-right {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 4px 12px 4px 8px;
+    border-radius: 12px;
+    padding: 0 8px;
+}
+
+#workspaces {
+    padding: 0;
+}
+
+#workspaces button {
+    padding: 4px 6px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 0;
+    font-size: 12px;
+    transition: none;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+}
+
+#clock,
+#battery,
+#network,
+#pulseaudio,
+#custom-shutdown, 
+#bluetooth {
+    color: #ffffff;
+    padding: 4px 10px;
+    font-weight: 400;
+}
+
+#pulseaudio {
+    color: #89b4fa;
+}
+
+#network {
+    color: #a6e3a1;
+}
+
+#battery {
+    color: #f9e2af;
+}
+
+#battery.warning {
+    color: #fab387;
+}
+
+#battery.critical {
+    color: #f38ba8;
+}
+#battery.good {
+    color: #5ca74d;
+}
+
+#custom-shutdown {
+    color: #f38ba8;
+    padding: 4px 12px;
+}
+
+#clock#time {
+    font-weight: 600;
+}

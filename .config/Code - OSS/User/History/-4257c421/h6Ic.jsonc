@@ -1,0 +1,129 @@
+{
+    "$schema": "https://fastfetch-org.github.io/fastfetch-schemas/jsonc/config-v2.jsonc",
+    "display": {
+        "keyWidth": 12,
+        "separator": ": "
+    },
+    "logo": {
+        "type": "none"
+    },
+    "modules": [
+        "os",
+        "host",
+        "kernel",
+        "uptime",
+        "title",
+        {
+            "type": "cpu"
+        },
+        {
+            "type": "gpu"
+        },
+        {
+            "type": "memory",
+            "key": "RAM"
+        },
+        {
+            "type": "disk",
+            "key": "Disk"
+        },
+        "display",
+        "colors"
+    ]
+}vv{
+    "$schema": "https://fastfetch-org.github.io/fastfetch-schemas/jsonc/config-v2.jsonc",
+    "display": {
+        "keyWidth": 12,
+        "separator": ": "
+    },
+    "logo": {
+        "type": "none"
+    },
+    "modules": [
+        "os",
+        "host",
+        "kernel",
+        "uptime",
+        "title",
+        {
+            "type": "cpu"
+        },
+        {
+            "type": "gpu"
+        },
+        {
+            "type": "memory",
+            "key": "RAM"
+        },
+        {
+            "type": "disk",
+            "key": "Disk"
+        },
+        "display",
+        "colors"
+    ]
+}{
+    "$schema": "https://fastfetch-org.github.io/fastfetch-schemas/jsonc/config-v2.jsonc",
+    "display": {
+        "keyWidth": 12,
+        "separator": ": "
+    },
+    "logo": {
+        "type": "none"
+    },
+    "modules": [
+        "os",
+        "host",
+        "kernel",
+        "uptime",
+        "title",
+        {
+            "type": "cpu"
+        },
+        {
+            "type": "gpu"
+        },
+        {
+            "type": "memory",
+            "key": "RAM"
+        },
+        {
+            "type": "disk",
+            "key": "Disk"
+        },
+        "display",
+        "colors"
+    ]
+}{
+    "$schema": "https://fastfetch-org.github.io/fastfetch-schemas/jsonc/config-v2.jsonc",
+    "display": {
+        "keyWidth": 12,
+        "separator": ": "
+    },
+    "logo": {
+        "type": "none"
+    },
+    "modules": [
+        "os",
+        "host",
+        "kernel",
+        "uptime",
+        "title",
+        {
+            "type": "cpu"
+        },
+        {
+            "type": "gpu"
+        },
+        {
+            "type": "memory",
+            "key": "RAM"
+        },
+        {
+            "type": "disk",
+            "key": "Disk"
+        },
+        "display",
+        "colors"
+    ]
+}

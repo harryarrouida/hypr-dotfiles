@@ -1,0 +1,64 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 45,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock#date", "clock#time"],
+    "modules-right": ["pulseaudio", "network", "battery", "custom/shutdown"],
+    
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        },
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "active": "●",
+            "default": "○"
+        }
+    },
+    
+    "clock#time": {
+        "format": "{:%H:%M}"
+    },
+    
+    "clock#date": {
+        "format": "{:%a %b %d}"
+    },
+    
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰸈 Muted",
+        "on-click": "pavucontrol",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        }
+    },
+    
+    "network": {
+        "format-wifi": "󰤨 {essid}",
+        "format-ethernet": "󰈀 Ether",
+        "format-disconnected": "󰤭 Offline"
+    },
+    
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    
+    "custom/shutdown": {
+        "format": "󰐥",
+        "on-click": "loginctl poweroff",
+        "tooltip": false
+    }
+}

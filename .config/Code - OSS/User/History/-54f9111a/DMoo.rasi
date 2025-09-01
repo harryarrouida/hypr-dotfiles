@@ -1,0 +1,10 @@
+/* ~/.config/rofi/config.rasi */
+
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    display-drun: "Apps";
+}
+
+@theme "/dev/null"
+@import "~/.cache/wal/colors-rofi-dark.rasi"

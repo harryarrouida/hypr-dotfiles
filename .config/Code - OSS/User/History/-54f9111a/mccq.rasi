@@ -1,0 +1,10 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+*{
+    font: "Fira Code 12";
+}
+configuration {
+    modi: "drun,run";
+    show-icons: true;  /* Shows icons */
+    display-drun: "Apps";
+}

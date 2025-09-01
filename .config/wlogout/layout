@@ -1,0 +1,8 @@
+[
+    {
+        "label": "Exit",
+        "action": "loginctl terminate-user $USER",
+        "text-color": "foreground",
+        "icon-name": "exit"
+    }
+]

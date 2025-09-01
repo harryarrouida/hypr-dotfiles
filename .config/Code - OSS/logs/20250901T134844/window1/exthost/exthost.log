@@ -1,0 +1,14 @@
+2025-09-01 13:48:54.538 [info] Extension host with pid 1132 started
+2025-09-01 13:48:54.538 [info] Skipping acquiring lock for /home/harry/.config/Code - OSS/User/workspaceStorage/e9fe6f41c177a4971b3ef3e728b9ebef.
+2025-09-01 13:48:54.781 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-09-01 13:48:54.964 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-09-01 13:48:55.007 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-09-01 13:48:55.423 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-09-01 13:48:56.325 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-09-01 13:48:56.385 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-09-01 13:48:56.742 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-09-01 13:48:57.658 [info] Eager extensions activated
+2025-09-01 13:48:57.742 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-09-01 13:48:57.865 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-09-01 14:15:26.275 [info] Extension host terminating: renderer closed the MessagePort
+2025-09-01 14:15:26.364 [info] Extension host with pid 1132 exiting with code 0
