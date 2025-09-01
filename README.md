@@ -57,6 +57,20 @@ Most of these are available in the official repositories or the AUR. For AUR pac
     dotfiles config --local status.showUntrackedFiles no
     ```
 
+## WARNING !!
+**setup auto login to hyprland**
+This is a major security risk, as your system will boot directly into your desktop without>
+```bash
+sudo systemctl edit getty@tty1.service
+```
+add the following lines to the file.
+```bash
+[Service]
+ExecStart=
+ExecStart=-/usr/bin/agetty --autologin your_username --noclear %I $TERM
+```
+REPLACE username, reboot.
+
 ## Usage
 
 * **Add new files:** To add a new file or folder to the repository, use the `dotfiles` alias.
