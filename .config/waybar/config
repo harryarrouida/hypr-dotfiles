@@ -2,10 +2,23 @@
     "layer": "top",
     "position": "top",
     "height": 45,
-    "modules-left": ["hyprland/workspaces", "memory", "cpu", "hyprland/window"],
+    "modules-left": ["custom/arch", "hyprland/workspaces", "memory", "cpu","custom/power-profile", "hyprland/window"],
     "modules-center": ["clock#date", "clock#time"],
     "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery", "custom/shutdown"],
     
+    "custom/power-profile": {
+    "exec": "~/.config/hypr/scripts/power-profile.sh",
+    "return-type": "",
+    "format": "{}",
+    "interval": 10,
+    "on-click": "~/.config/hypr/scripts/power-cycle.sh",
+    "tooltip-format": "Power Profile\nClick to cycle"
+},
+      "custom/arch": {
+        "format": "󰣇",
+        "tooltip": false,
+        "on-click": "rofi -show drun"
+    },
 
     "memory": {
         "format": "󰍛 {used:0.1f}G"
@@ -28,7 +41,7 @@
         "1": [],
         "2": [],
         "3": []
-    },
+    }
 },
     "clock#time": {
         "format": "{:%H:%M}"
@@ -40,7 +53,7 @@
 
     "backlight": {
         "device": "intel_backlight",
-        "format": "{icon}  {percent}%",
+        "format": "{icon} {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"]
     },
 

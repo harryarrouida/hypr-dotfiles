@@ -1,24 +1,18 @@
 #!/bin/bash
 
-# Directory containing your wallpapers
 WALLPAPERS_DIR="$HOME/Pictures/Wallpapers"
 
-# Get a random wallpaper file
-RANDOM_WALLPAPER=$(find "$WALLPAPERS_DIR" -type f | shuf -n 1)
+if [ -n "$1" ]; then
+    WALLPAPER="$1"
+else
+    WALLPAPER=$(find "$WALLPAPERS_DIR" -type f | shuf -n 1)
+fi
 
-# Check if a file was found
-if [ -n "$RANDOM_WALLPAPER" ]; then
-    # Generate Pywal colors for Hyprland and other applications
-    wal -i "$RANDOM_WALLPAPER"
-
-    # Generate the Hyprland specific color file
+if [ -n "$WALLPAPER" ]; then
+    wal -i "$WALLPAPER"
     ~/.config/hypr/scripts/generate_hypr_colors.sh
-
-    # Set the new wallpaper
-    hyprctl hyprpaper preload "$RANDOM_WALLPAPER"
-    hyprctl hyprpaper wallpaper ",$RANDOM_WALLPAPER"
-    
-    # Reload Hyprland and other apps
+    hyprctl hyprpaper preload "$WALLPAPER"
+    hyprctl hyprpaper wallpaper ",$WALLPAPER"
     hyprctl reload
     killall waybar && waybar &
     kitty @ set-colors -a -c ~/.cache/wal/colors-kitty.conf

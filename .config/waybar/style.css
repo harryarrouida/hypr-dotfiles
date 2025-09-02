@@ -3,7 +3,8 @@
 * {
     border: none;
     font-family: 'Fira Code';
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 600;
     min-height: 0;
 }
 
@@ -11,7 +12,7 @@ window#waybar {
     background: @background;
 }
 
-/* --- General Module Styling --- */
+/* --- Compact Module Styling --- */
 #workspaces,
 #cpu,
 #memory,
@@ -21,99 +22,122 @@ window#waybar {
 #network,
 #bluetooth,
 #backlight,
-#custom-shutdown
-{
+#custom-shutdown {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 4px 15px;
-    margin: 5px;
-    border-radius: 10px;
-    border: 1px solid rgba(205, 214, 244, 0.1); /* Subtle border */
+    padding: 3px 10px;
+    margin: 3px 2px;
+    border-radius: 8px;
+    border: 1px solid rgba(205, 214, 244, 0.1);
 }
 
-/* --- Left Modules: Workspaces, CPU, Memory --- */
+#custom-power-profile {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 3px 14px;
+    margin: 3px 1px;
+    border-radius: 6px;
+    border: 1px solid rgba(205, 214, 244, 0.08);
+    color: #f9e2af;
+    font-size: 16px;
+}
+
+/* --- Shared Background Groups --- */
+#custom-arch {
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 4px 10px;
+    margin: 3px 2px;
+    border-radius: 8px;
+    border: 1px solid rgba(205, 214, 244, 0.15);
+    color: #89b4fa; /* Blue */
+    font-size: 18px;
+    min-width: 20px;
+}
+/* --- Left Modules --- */
 .modules-left {
-    margin-left: 8px;
+    margin-left: 6px;
 }
 
 #workspaces {
-    padding: 0 10px;
+    padding: 0 6px;
 }
 
 #workspaces button {
-    padding: 2px 8px;
+    padding: 2px 6px;
     background-color: transparent;
-    color: #6c7086; /* Inactive/grey (Subtext0) */
+    color: #6c7086;
     transition: none;
 }
 
 #workspaces button.active {
-    color: #cdd6f4; /* Active/white (Text) */
+    color: #cdd6f4;
 }
 
 #cpu {
-    color: #cba6f7; /* Mauve */
+    color: #cba6f7;
 }
 
 #memory {
-    color: #b4befe; /* Lavender */
+    color: #b4befe;
 }
 
-
-/* --- Center Module: Clock --- */
-.modules-center {
-    /* The #clock rule already styles this */
+/* --- Center Module --- */
+#clock {
+    padding: 4px 12px;
 }
 
-
-/* --- Right Modules: System Tray & Info --- */
+/* --- Right Modules --- */
 .modules-right {
-    margin-right: 8px;
+    margin-right: 6px;
 }
 
 #backlight {
-    color: #94e2d5; /* Teal */
+    color: #94e2d5;
 }
 
 #bluetooth {
-    color: #89b4fa; /* Blue */
+    color: #89b4fa;
 }
+
 #bluetooth.off {
-    color: #6c7086; /* Grey when off */
+    color: #6c7086;
 }
 
 #pulseaudio {
-    color: #74c7ec; /* Sapphire */
+    color: #74c7ec;
 }
+
 #pulseaudio.muted {
-    color: #f38ba8; /* Red when muted */
+    color: #f38ba8;
 }
 
 #network {
-    color: #a6e3a1; /* Green */
+    color: #a6e3a1;
 }
+
 #network.disconnected {
-    color: #f38ba8; /* Red */
+    color: #f38ba8;
 }
 
 #battery {
-    color: #a6e3a1; /* Default to Green */
+    color: #a6e3a1;
 }
+
 #battery.warning:not(.charging) {
-    color: #f9e2af; /* Yellow */
+    color: #f9e2af;
 }
+
 #battery.critical:not(.charging) {
-    color: #f38ba8; /* Red */
+    color: #f38ba8;
 }
+
 #battery.charging {
-    color: #89b4fa; /* Blue */
+    color: #89b4fa;
 }
 
 #custom-shutdown {
-    color: #f38ba8; /* Red */
+    color: #f38ba8;
 }
 
-
-#window{
-	margin-left: 8px;
-	font-size: 10px;
+#window {
+    margin-left: 8px;
+    font-size: 10px;
 }
