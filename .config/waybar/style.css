@@ -22,7 +22,8 @@ window#waybar {
 #network,
 #bluetooth,
 #backlight,
-#custom-shutdown {
+#custom-shutdown
+ {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 3px 10px;
     margin: 3px 2px;
@@ -36,7 +37,7 @@ window#waybar {
     margin: 3px 1px;
     border-radius: 6px;
     border: 1px solid rgba(205, 214, 244, 0.08);
-    color: #f9e2af;
+    color: #CDD6F4;
     font-size: 16px;
 }
 
@@ -47,7 +48,7 @@ window#waybar {
     margin: 3px 2px;
     border-radius: 8px;
     border: 1px solid rgba(205, 214, 244, 0.15);
-    color: #89b4fa; /* Blue */
+    color: #89b4fa;
     font-size: 18px;
     min-width: 20px;
 }
@@ -63,25 +64,26 @@ window#waybar {
 #workspaces button {
     padding: 2px 6px;
     background-color: transparent;
-    color: #6c7086;
+    color: #6C7086;
     transition: none;
 }
 
 #workspaces button.active {
-    color: #cdd6f4;
+    color: #CDD6F4;
 }
 
 #cpu {
-    color: #cba6f7;
+    color: #CDD6F4;
 }
 
 #memory {
-    color: #b4befe;
+    color: #CDD6F4;
 }
 
 /* --- Center Module --- */
 #clock {
     padding: 4px 12px;
+    color: #CDD6F4;
 }
 
 /* --- Right Modules --- */
@@ -90,54 +92,55 @@ window#waybar {
 }
 
 #backlight {
-    color: #94e2d5;
+    color: #CDD6F4;
 }
 
 #bluetooth {
-    color: #89b4fa;
+    color: #89B4FA; /* Blue for connected */
 }
 
 #bluetooth.off {
-    color: #6c7086;
+    color: #6C7086; /* Grey for off */
 }
 
 #pulseaudio {
-    color: #74c7ec;
+    color: #A6E3A1; /* Green for connected */
 }
 
 #pulseaudio.muted {
-    color: #f38ba8;
+    color: #F38BA8; /* Red for muted */
 }
 
 #network {
-    color: #a6e3a1;
+    color: #A6E3A1;
 }
 
 #network.disconnected {
-    color: #f38ba8;
+    color: #F38BA8;
 }
 
 #battery {
-    color: #a6e3a1;
+    color: #A6E3A1;
 }
 
 #battery.warning:not(.charging) {
-    color: #f9e2af;
+    color: #F9E2AF;
 }
 
 #battery.critical:not(.charging) {
-    color: #f38ba8;
+    color: #F38BA8;
 }
 
 #battery.charging {
-    color: #89b4fa;
+    color: #89B4FA;
 }
 
 #custom-shutdown {
-    color: #f38ba8;
+    color: #F38BA8;
 }
 
 #window {
     margin-left: 8px;
     font-size: 10px;
+    color: #CDD6F4;
 }
