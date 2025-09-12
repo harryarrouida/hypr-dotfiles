@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "height": 45,
-    "modules-left": ["custom/arch", "hyprland/workspaces", "memory", "cpu", "custom/power-profile", "hyprland/window"],
+    "modules-left": ["custom/arch", "hyprland/workspaces", "memory", "cpu", "temperature", "custom/power-profile", "hyprland/window"],
     "modules-center": ["clock#time"],
     "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery", "custom/shutdown"],
     
@@ -28,6 +28,14 @@
         "format": " {usage}%"
     },
 
+"temperature": {
+    "thermal-zone": 2,
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "format": "{temperatureC}°C",
+    "interval": 10
+},
+
+
     "hyprland/window": {
         "format": "{}",
         "max-length": 15
@@ -44,7 +52,7 @@
     }
 },
     "clock#time": {
-        "format": "{:%a %b %d %H:%M}"
+        "format": "{:%b %d  %a  %H:%M}"
     },
     
     "backlight": {
@@ -79,8 +87,8 @@
     "battery": {
         "states": {
             "good": 60,
-            "warning": 30,
-            "critical": 15
+            "warning": 40,
+            "critical": 20
         },
         "format": "{icon} {capacity}%",
         "format-charging": "󰂄 {capacity}%",
