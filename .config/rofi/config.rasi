@@ -1,10 +1,98 @@
+
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
-*{
+* {
     font: "Fira Code 12";
 }
+
 configuration {
     modi: "drun,run";
-    show-icons: true;  /* Shows icons */
+    show-icons: true;
     display-drun: "Apps";
+    drun-display-format: "{name}";
+    icon-theme: "Papirus";
+    
+    hide-scrollbar: true;
+    bw: 0;
+    fullscreen: false;
+    terminal: "kitty";
+    cycle: true;
+    line-margin: 2;
+    line-padding: 2;
+    fixed-num-lines: true;
+}
+
+window {
+    background-color: @background;
+    border-radius: 10px;
+    border-color: @foreground;
+    width: 40%;
+    height: 50%;
+    x-offset: -50%;
+    y-offset: -50%;
+}
+
+mainbox {
+    children: [ "inputbar", "listview" ];
+    spacing: 10px;
+    padding: 10px;
+}
+
+inputbar {
+    background-color: @background-alt;
+    text-color: @foreground;
+    border-radius: 5px;
+    padding: 5px;
+    children: [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled: true;
+    padding: 5px;
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+entry {
+    background-color: @background-alt;
+    text-color: @foreground;
+    placeholder: "Search...";
+    placeholder-color: @foreground;
+    expand: true;
+    padding: 5px;
+}
+
+listview {
+    background-color: @background;
+    columns: 1;
+    spacing: 5px;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+}
+
+element {
+    background-color: @background;
+    text-color: @foreground;
+    orientation: horizontal;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 10px;
+}
+
+element-text {
+    expand: true;
+    vertical-align: 0.5;
+    margin: 0 10px;
+}
+
+element selected {
+    background-color: transparent;
+    text-color: @foreground;
+    border: 0px 0px 0px 2px;
+    border-color: @foreground;
 }

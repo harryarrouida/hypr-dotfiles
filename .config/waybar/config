@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 45,
+    "height": 42,
     "modules-left": ["custom/arch", "hyprland/workspaces", "group/system-info", "custom/power-profile", "hyprland/window"],
     "modules-center": ["clock#time"],
     "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery", "custom/shutdown"],
@@ -47,11 +47,12 @@
 
     "hyprland/workspaces": {
         "on-click": "activate",
-        "persistent-only": true,
         "persistent_workspaces": {
-            "1": "󰊡",
-            "2": "󰊡",
-            "3": "󰊡"
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5"
         }
     },
     "clock#time": {
@@ -100,7 +101,7 @@
 
     "custom/shutdown": {
         "format": "",
-        "on-click": "$HOME/.config/hypr/scripts/powermenu.sh",
+        "on-click": "$HOME/.config/rofi/powermenu/powermenu.sh",
         "tooltip": false
     }
 }
