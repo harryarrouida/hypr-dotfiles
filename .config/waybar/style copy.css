@@ -23,34 +23,34 @@ window#waybar {
 #bluetooth,
 #backlight,
 #custom-shutdown,
-#temperature {
+#temperature, 
+#custom-shutdown
+ {
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 0px 6px; /* Reduced horizontal padding */
+    padding: 3px 10px;
     margin: 3px 2px;
     border-radius: 8px;
     border: 1px solid rgba(205, 214, 244, 0.1);
 }
 
 #custom-power-profile {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 3px 12px; /* Reduced padding */
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 3px 14px;
     margin: 3px 1px;
     border-radius: 6px;
-    /* border: 1px solid rgba(205, 214, 244, 0.08); */
-    border: 1px solid rgba(205, 214, 244, 0.1);
-    color: @forground;
+    border: 1px solid rgba(205, 214, 244, 0.08);
+    color: #CDD6F4;
     font-size: 16px;
 }
 
 /* --- Shared Background Groups --- */
 #custom-arch {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 2px 8px; /* Reduced padding */
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 4px 10px;
     margin: 3px 2px;
     border-radius: 8px;
-    /* border: 1px solid rgba(205, 214, 244, 0.15); */
-    border: 1px solid rgba(205, 214, 244, 0.1);
-    color: @forground;
+    border: 1px solid rgba(205, 214, 244, 0.15);
+    color: #89b4fa;
     font-size: 18px;
     min-width: 20px;
 }
@@ -60,38 +60,32 @@ window#waybar {
 }
 
 #workspaces {
-    padding: 0 4px; /* Reduced padding for workspaces */
+    padding: 0 6px;
 }
 
 #workspaces button {
-    padding: 2px 4px; /* Reduced padding */
+    padding: 2px 6px;
     background-color: transparent;
-    color: @color1;
+    color: #6C7086;
     transition: none;
 }
 
-#workspaces:hover {
-    color: @forground;
-}
-
 #workspaces button.active {
-    color: @forground;
+    color: #CDD6F4;
 }
 
 #cpu {
-    color: @forground;
-    padding: 0px 6px;
+    color: #CDD6F4;
 }
 
 #memory {
-    color: @forground;
-    padding: 0px 6px;
+    color: #CDD6F4;
 }
 
 /* --- Center Module --- */
 #clock {
-    padding: 2px 8px; /* Reduced padding */
-    color: @forground;
+    padding: 4px 12px;
+    color: #CDD6F4;
 }
 
 /* --- Right Modules --- */
@@ -100,31 +94,27 @@ window#waybar {
 }
 
 #backlight {
-    color: @forground;
-    padding: 0px 6px;
+    color: #CDD6F4;
 }
 
 #bluetooth {
-    color: @forground;
-    padding: 0px 6px;
+    color: #89B4FA; /* Blue for connected */
 }
 
 #bluetooth.off {
-    color: #6C7086;
+    color: #6C7086; /* Grey for off */
 }
 
 #pulseaudio {
-    color: @forground;
-    padding: 0px 6px;
+    color: #A6E3A1; /* Green for connected */
 }
 
 #pulseaudio.muted {
-    color: #F38BA8;
+    color: #F38BA8; /* Red for muted */
 }
 
 #network {
-    color: @forground;
-    padding: 0px 6px;
+    color: #A6E3A1;
 }
 
 #network.disconnected {
@@ -132,8 +122,7 @@ window#waybar {
 }
 
 #battery {
-    color: @forground;
-    padding: 0px 6px;
+    color: #A6E3A1;
 }
 
 #battery.warning:not(.charging) {
@@ -149,12 +138,15 @@ window#waybar {
 }
 
 #custom-shutdown {
-    color: @forground;
-    padding: 2px 12px;
+    color: #F38BA8;
 }
 
 #window {
     margin-left: 8px;
     font-size: 10px;
-    color: @forground;
+    color: #CDD6F4;
+}
+
+#custom-shutdown {
+	padding: 4px 10px;
 }
