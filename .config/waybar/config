@@ -2,13 +2,18 @@
     "layer": "top",
     "position": "top",
     "height": 42,
-    "modules-left": ["custom/arch", "hyprland/workspaces", "group/system-info", "custom/power-profile", "hyprland/window"],
+    "modules-left": ["custom/arch", "custom/pacman", "hyprland/workspaces", "group/system-info", "custom/power-profile", "hyprland/window"],
     "modules-center": ["clock#time"],
     "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery", "custom/shutdown"],
 
     "group/system-info": {
         "orientation": "horizontal",
-        "modules": [ "cpu", "memory", "temperature" ]
+        "modules": [ "cpu", "memory", "temperature", "disk" ]
+    },
+
+    "disk": {
+        "format": "󰋊 {free}",
+        "path": "/"
     },
 
     "custom/power-profile": {
@@ -23,6 +28,12 @@
          "format": "󰣇", 
         "tooltip": false,
         "on-click": "rofi -show drun"
+    },
+
+    "custom/pacman": {
+        "format": "󰮯 {}",
+        "exec": "~/.config/hypr/scripts/pacman-packages.sh",
+        "interval": 3600
     },
 
     "memory": {
@@ -47,12 +58,15 @@
 
     "hyprland/workspaces": {
         "on-click": "activate",
-        "persistent_workspaces": {
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5"
+        "format": "{icon}",
+        "format-icons": {
+            "1": "●",
+            "2": "●",
+            "3": "●",
+            "4": "●",
+            "5": "●",
+            "active": "ᗧ",
+            "default": "●"
         }
     },
     "clock#time": {
