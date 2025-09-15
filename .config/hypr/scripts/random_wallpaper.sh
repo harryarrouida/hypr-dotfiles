@@ -17,5 +17,7 @@ if [ -n "$WALLPAPER" ]; then
     killall waybar && waybar &
     killall rofi
     kitty @ set-colors -a -c ~/.cache/wal/colors-kitty.conf
+    # eww reload
+    eww reload
     ~/.config/hypr/scripts/hyprlock_wallpaper_link.sh
 fi
