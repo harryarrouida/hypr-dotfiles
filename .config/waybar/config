@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 42,
+    "height": 44,
     "modules-left": ["custom/arch", "custom/pacman", "hyprland/workspaces", "group/system-info", "custom/power-profile", "hyprland/window"],
     "modules-center": ["clock#time"],
     "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery", "custom/shutdown"],

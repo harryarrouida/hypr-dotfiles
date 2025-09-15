@@ -13,6 +13,12 @@ window#waybar {
     margin: 5px;
 }
 
+.module {
+    padding: 2px 8px;
+    margin: 3px;
+    border-radius: 8px;
+}
+
 /* --- Compact Module Styling --- */
 #workspaces,
 #cpu,
@@ -26,7 +32,7 @@ window#waybar {
 #custom-shutdown,
 #temperature,
 #disk,
-#custom-pacman {
+#custom-pacman, #custom-power-profile, #custom-arch {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 0px 6px; /* Reduced horizontal padding */
     margin: 3px 2px;
@@ -35,22 +41,21 @@ window#waybar {
 }
 
 #custom-power-profile {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 3px 12px; /* Reduced padding */
+    padding: 3px 12px;
     margin: 3px 1px;
     border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
     /* border: 1px solid rgba(205, 214, 244, 0.08); */
     border: 1px solid rgba(205, 214, 244, 0.1);
     color: @forground;
     font-size: 16px;
 }
 
-/* --- Shared Background Groups --- */
 #custom-arch {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 2px 8px; /* Reduced padding */
+    padding: 2px 8px;
     margin: 3px 2px;
     border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
     /* border: 1px solid rgba(205, 214, 244, 0.15); */
     border: 1px solid rgba(205, 214, 244, 0.1);
     color: @forground;
@@ -63,7 +68,7 @@ window#waybar {
 }
 
 #workspaces {
-    padding: 0 4px; /* Reduced padding for workspaces */
+    padding: 0 4px;
 }
 
 #workspaces button {
@@ -93,7 +98,7 @@ window#waybar {
 
 /* --- Center Module --- */
 #clock {
-    padding: 2px 8px; /* Reduced padding */
+    padding: 2px 8px;
     color: @forground;
 }
 
@@ -152,8 +157,8 @@ window#waybar {
 }
 
 #custom-shutdown {
-    color: @forground;
     padding: 2px 12px;
+    color: @forground;
 }
 
 #window {
