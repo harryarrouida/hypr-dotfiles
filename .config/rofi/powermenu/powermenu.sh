@@ -1,26 +1,35 @@
 #!/bin/bash
 
-# Nerd Font Icons
-lock=''
-shutdown=''
-reboot=''
-logout=''
+theme="$HOME/.config/rofi/powermenu/powermenu.rasi"
 
-options="$lock Lock\n$shutdown Shutdown\n$reboot Reboot\n$logout Logout"
+lock=" Lock"
+logout="󰍃 Logout"
+poweroff="⏻ Poweroff"
+reboot=" Reboot"
+sleep=" Suspend"
+ 
+selected_option=$(echo "$poweroff
+$lock
+$reboot
+$sleep
+$logout" | rofi -dmenu -i -p "Powermenu:" \
+		-theme ${theme})
 
-selected=$(echo -e "$options" | rofi -dmenu -p "Power" -theme "/home/harry/.config/rofi/config.rasi")
-
-case "$(echo "$selected" | awk '{print $2}')" in
-    Lock)
-        hyprlock
-        ;;
-    Shutdown)
-        systemctl poweroff
-        ;;
-    Reboot)
-        systemctl reboot
-        ;;
-    Logout)
-        hyprctl dispatch exit
-        ;;
-esac
+if [ "$selected_option" == "$lock" ]
+then
+  hyprlock
+elif [ "$selected_option" == "$logout" ]
+then
+ loginctl terminate-user `harry`
+elif [ "$selected_option" == "$poweroff" ]
+then
+  systemctl poweroff
+elif [ "$selected_option" == "$reboot" ]
+then
+  systemctl reboot
+elif [ "$selected_option" == "$sleep" ]
+then
+  hyprlock & sleep 2 && systemctl suspend
+else
+  echo "No match"
+fi

@@ -1,7 +1,12 @@
-
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
 * {
+    border-colour: var(selected);
+    background-colour: var(background);
+    foreground-colour: var(foreground);
+    alternate-background: var(selected);
+    alternate-foreground: var(background);
+
     font: "Fira Code 12";
 }
 
@@ -39,6 +44,7 @@ mainbox {
     children: [ "inputbar", "listview" ];
     spacing: 10px;
     padding: 10px;
+    background-color: transparent;
 }
 
 inputbar {
@@ -47,6 +53,7 @@ inputbar {
     border-radius: 5px;
     padding: 5px;
     children: [ "prompt", "entry" ];
+    enabled: true;
 }
 
 prompt {
@@ -63,6 +70,7 @@ entry {
     placeholder-color: @foreground;
     expand: true;
     padding: 5px;
+    enabled: true;
 }
 
 listview {
@@ -72,6 +80,8 @@ listview {
     cycle: true;
     dynamic: true;
     layout: vertical;
+    enabled: true;
+    padding: 0px;
 }
 
 element {
